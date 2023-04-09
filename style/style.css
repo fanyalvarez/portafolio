@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,7 @@ body {
 h1 {
   font-size: 5rem;
 }
+
 h1 span {
   color: #00bfff;
 }
@@ -47,9 +49,10 @@ p {
   width: 100%;
   min-height: 100vh;
   -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   pointer-events: none;
 }
+
 .home nav {
   width: 100%;
   display: flex;
@@ -59,9 +62,11 @@ p {
   height: 100px;
   align-items: center;
 }
+
 .home nav ul {
   display: flex;
 }
+
 .home nav ul li {
   position: relative;
   list-style: none;
@@ -73,6 +78,7 @@ p {
   transform: 0.3s;
   overflow: hidden;
 }
+
 .home .homeText {
   display: flex;
   justify-content: center;
@@ -120,6 +126,7 @@ p {
   filter: saturate(2);
   overflow: hidden;
 }
+
 .bgAnimation .backgroundAnim {
   position: absolute;
   top: 0;
@@ -149,32 +156,39 @@ p {
   0% {
     top: -60px;
   }
+
   100% {
     top: 120%;
   }
 }
+
 .aboutme {
   width: 100%;
   min-height: 70vh;
+  margin: 8% 0;
   -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   pointer-events: none;
 }
+
 .aboutme .aboutContainer {
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
 }
+
 .aboutme .aboutContainer .aboutImg {
   height: 500px;
   width: 350px;
 }
+
 .aboutme .aboutContainer .aboutText {
-  width: 500px;
-  margin: 0 70px;
+  width: 40%;
+  margin: 0 10%;
 }
+
 .aboutme .aboutContainer .aboutText p {
   margin-bottom: 50px;
 }
@@ -182,41 +196,53 @@ p {
 .skills {
   width: 100%;
   min-height: 60vh;
+  margin: 10% 0 0;
   -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-  pointer-events: none;
+  backdrop-filter: blur(1px);
 }
+
 .skills .container-skills {
   width: 800px;
-  margin: auto;
+  margin: 7% auto;
+  text-align: center;
   -moz-column-count: 3;
-       column-count: 3;
+  column-count: 3;
   -moz-column-width: 10vw;
-       column-width: 10vw;
+  column-width: 10vw;
 }
+
 .skills .icon {
-  margin-left: 60px;
+  margin: 0 60px 60px;
   width: 150px;
   height: 150px;
+
 }
+
 .skills svg {
   border: 4px solid #00bfff;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .projects {
   width: 100%;
   min-height: 100vh;
+  margin-bottom: 10%;
   -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  backdrop-filter: blur(1px);
 }
 
 .cards {
@@ -226,12 +252,18 @@ p {
   flex-wrap: wrap;
 }
 
+.projectCard {
+  margin: 2%;
+  max-width: 450px;
+  min-width: 230px;
+}
+
 .projectContent {
   background-color: #1d1d1d;
   display: inline-block;
   font-size: 16px;
   margin: 10px;
-  max-width: 500px;
+  max-width: 450px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -276,9 +308,9 @@ p {
 
 .projectContent .projectImg {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  width: 550px;
-  height: 300px;
+  backface-visibility: hidden;
+  max-width: 440px;
+  min-width: 230px;
   display: block;
 }
 
@@ -319,4 +351,47 @@ p {
 .projectContent.hover figcaption {
   transform: translate(-50%, 50%) scale(1);
   opacity: 1;
-}/*# sourceMappingURL=style.css.map */
+}
+.cards{
+  position: relative;
+}
+
+.contactBg {
+  position: absolute;
+  /* min-height: 50vh; */
+  z-index: -1;
+  width: 100%;
+  margin-bottom: 10%;
+  border-top: 1px solid #00bfff;
+}
+
+#line1 {
+  stroke: #0066ff;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear;
+  stroke-miterlimit: 10;
+  animation-iteration-count: infinite;
+}
+
+#line2 {
+  stroke: #00bfff;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  stroke-width: 2px;
+  animation: dash 6s linear;
+  stroke-miterlimit: 10;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.contactData{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
