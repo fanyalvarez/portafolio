@@ -45,6 +45,8 @@ p {
   font-weight: 600;
 }
 
+
+/* home */
 .home {
   width: 100%;
   min-height: 100vh;
@@ -52,7 +54,6 @@ p {
   backdrop-filter: blur(1px);
   pointer-events: none;
 }
-
 .home nav {
   width: 100%;
   display: flex;
@@ -62,11 +63,9 @@ p {
   height: 100px;
   align-items: center;
 }
-
 .home nav ul {
   display: flex;
 }
-
 .home nav ul li {
   position: relative;
   list-style: none;
@@ -78,7 +77,6 @@ p {
   transform: 0.3s;
   overflow: hidden;
 }
-
 .home .homeText {
   display: flex;
   justify-content: center;
@@ -87,7 +85,6 @@ p {
   text-align: center;
   pointer-events: none;
 }
-
 .home nav ul li::after {
   content: "";
   position: absolute;
@@ -99,20 +96,16 @@ p {
   transform: translateX(-50%);
   transition: 0.3s;
 }
-
 .home nav li:hover {
   color: #00bfff;
 }
-
 .home nav li:hover::after {
   width: 70%;
 }
-
 .btn:hover {
   background-color: var(--i);
   color: #000;
 }
-
 .bgAnimation {
   position: absolute;
   top: 0;
@@ -126,7 +119,6 @@ p {
   filter: saturate(2);
   overflow: hidden;
 }
-
 .bgAnimation .backgroundAnim {
   position: absolute;
   top: 0;
@@ -137,7 +129,6 @@ p {
   filter: blur(60px);
   animation: animBack 6s linear infinite;
 }
-
 .colorBox {
   z-index: 2;
   filter: brightness(1.1);
@@ -146,12 +137,10 @@ p {
   margin: 2px;
   background: #1d1d1d;
 }
-
 .colorBox:hover {
   background: #00bfff;
   transition-duration: 0s;
 }
-
 @keyframes animBack {
   0% {
     top: -60px;
@@ -162,37 +151,84 @@ p {
   }
 }
 
+
+/* about */
 .aboutme {
   width: 100%;
   min-height: 70vh;
   margin: 8% 0;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-  pointer-events: none;
 }
-
 .aboutme .aboutContainer {
-  width: 60%;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  margin-top: 7%;
+  position: relative;
 }
-
-.aboutme .aboutContainer .aboutImg {
-  height: 500px;
-  width: 350px;
+.aboutPhoto {
+  width: 378px;
+  height: 450px;
 }
-
+.aboutImg {
+  border: 3px solid #fff;
+  width: 375px;
+  height: 378px;
+  z-index: 3;
+  opacity: 1;
+  animation: photo-ani 4s forwards;
+  position: absolute;
+  bottom: 46px; left: 0;
+}
 .aboutme .aboutContainer .aboutText {
-  width: 40%;
-  margin: 0 10%;
+  margin: 0 25px;
 }
-
+.aboutPhoto-line {
+  z-index: 2;
+  position: relative;
+  bottom: 56px;
+}
 .aboutme .aboutContainer .aboutText p {
+  width: 400px ;
   margin-bottom: 50px;
 }
+.line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: line-ani 5.5s forwards;
+}
+.border {
+  stroke-width: 3px;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: line-ani 3s forwards;
+}
+@keyframes line-ani {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes photo-ani {
+  0% {
+    opacity: 0;
+  }
 
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* skills */
 .skills {
   width: 100%;
   min-height: 60vh;
@@ -200,7 +236,6 @@ p {
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
 }
-
 .skills .container-skills {
   width: 800px;
   margin: 7% auto;
@@ -210,14 +245,11 @@ p {
   -moz-column-width: 10vw;
   column-width: 10vw;
 }
-
 .skills .icon {
   margin: 0 60px 60px;
   width: 150px;
   height: 150px;
-
 }
-
 .skills svg {
   border: 4px solid #00bfff;
   border-radius: 50%;
@@ -226,7 +258,6 @@ p {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   animation: rotate 5s infinite linear;
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -237,40 +268,35 @@ p {
   }
 }
 
+
+/* projects */
 .projects {
   width: 100%;
   min-height: 100vh;
   margin-bottom: 10%;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
 }
-
 .cards {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .projectCard {
   margin: 2%;
-  max-width: 450px;
-  min-width: 230px;
+  max-width: 650px;
+  min-width: 550px;
 }
-
 .projectContent {
   background-color: #1d1d1d;
   display: inline-block;
   font-size: 16px;
-  margin: 10px;
-  max-width: 450px;
-  min-width: 230px;
+  /* margin: 10px; */
+  max-width: 650px;
+  min-width: 550px;
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100%;
 }
-
 .projectContent h4 {
   background-color: #1d1d1d;
   border: 2px solid #00bfff;
@@ -281,7 +307,11 @@ p {
   margin: 0;
   padding: 10px 20px;
 }
-
+.projectP {
+  max-width: 500px;
+  min-width: 230px;
+  text-align: center;
+}
 .projectContent::before,
 .projectContent::after {
   content: "";
@@ -297,23 +327,19 @@ p {
   opacity: 0.9;
   z-index: 1;
 }
-
 .projectContent::before {
   transform: skew(45deg) translateX(-155%);
 }
-
 .projectContent::after {
   transform: skew(45deg) translateX(155%);
 }
-
 .projectContent .projectImg {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  max-width: 440px;
-  min-width: 230px;
+  width: 550px;
+  height: 300px;
   display: block;
 }
-
 .projectContent figcaption {
   position: absolute;
   top: 35%;
@@ -323,7 +349,6 @@ p {
   opacity: 0;
   box-shadow: 0 0 10px #1d1d1d;
 }
-
 .projectContent a {
   position: absolute;
   top: 0;
@@ -332,30 +357,25 @@ p {
   right: 0;
   z-index: 3;
 }
-
 .projectContent:hover .projectImg {
   opacity: 0.5;
 }
-
 .projectContent:hover::before,
 .projectContent.hover::before {
   transform: skew(45deg) translateX(-55%);
 }
-
 .projectContent:hover::after,
 .projectContent.hover::after {
   transform: skew(45deg) translateX(55%);
 }
-
 .projectContent:hover figcaption,
 .projectContent.hover figcaption {
   transform: translate(-50%, 50%) scale(1);
   opacity: 1;
 }
-.cards{
-  position: relative;
-}
 
+
+/* contact */
 .contactBg {
   position: absolute;
   /* min-height: 50vh; */
@@ -364,7 +384,6 @@ p {
   margin-bottom: 10%;
   border-top: 1px solid #00bfff;
 }
-
 #line1 {
   stroke: #0066ff;
   stroke-dasharray: 100;
@@ -373,7 +392,6 @@ p {
   stroke-miterlimit: 10;
   animation-iteration-count: infinite;
 }
-
 #line2 {
   stroke: #00bfff;
   stroke-dasharray: 200;
@@ -383,14 +401,12 @@ p {
   stroke-miterlimit: 10;
   animation-iteration-count: infinite;
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
-
-.contactData{
+.contactData {
   position: absolute;
   z-index: 2;
   width: 100%;
