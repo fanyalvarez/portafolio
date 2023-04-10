@@ -22,7 +22,7 @@ h1 span {
 h3 {
   font-size: 3.2em;
   text-align: center;
-  margin: 3% 0;
+  margin-bottom: 5% ;
 }
 
 p {
@@ -155,36 +155,42 @@ p {
 /* about */
 .aboutme {
   width: 100%;
-  min-height: 70vh;
-  margin: 8% 0;
+  min-height: 50vh;
+  margin-top: 10%;
+  /* text-align: center; */
 }
 .aboutme .aboutContainer {
-  width: 65%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 7%;
-  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+/* background-color: bisque; */
 }
 .aboutPhoto {
-  width: 378px;
+  /* max-width: 800px; */
+  min-width: 378px;
   height: 450px;
+margin: 0 3%;
+  /* background-color: #0066ff; */
+  position: relative;
 }
 .aboutImg {
   border: 3px solid #fff;
-  width: 375px;
-  height: 378px;
+  max-width: 375px;
+  min-width: 375px;
   z-index: 3;
   opacity: 1;
   animation: photo-ani 4s forwards;
   position: absolute;
   bottom: 46px; left: 0;
 }
-.aboutme .aboutContainer .aboutText {
-  margin: 0 25px;
+.aboutText {
+  margin: 0 6% ;
+  /* background-color: #5f2e2e; */
 }
 .aboutPhoto-line {
+  max-width: 378px;
+  min-width: 378px;
   z-index: 2;
   position: relative;
   bottom: 56px;
@@ -232,21 +238,23 @@ p {
 .skills {
   width: 100%;
   min-height: 60vh;
-  margin: 10% 0 0;
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
+  margin-top: 8%;
 }
-.skills .container-skills {
-  width: 800px;
-  margin: 7% auto;
+.containerSkills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.skills .contentSkills {
+  width: 700px;
+  padding-left: 70px;
   text-align: center;
-  -moz-column-count: 3;
   column-count: 3;
-  -moz-column-width: 10vw;
   column-width: 10vw;
 }
 .skills .icon {
-  margin: 0 60px 60px;
+  margin-bottom: 50px;
   width: 150px;
   height: 150px;
 }
@@ -272,30 +280,35 @@ p {
 /* projects */
 .projects {
   width: 100%;
-  min-height: 100vh;
-  margin-bottom: 10%;
+  min-height: 120vh;
+  margin-top: 8%;
+
 }
 .cards {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
 }
 .projectCard {
-  margin: 2%;
-  max-width: 650px;
-  min-width: 550px;
+  margin: 4%;
+  max-width: 400px;
+  height: 230px;
 }
 .projectContent {
   background-color: #1d1d1d;
   display: inline-block;
-  font-size: 16px;
-  /* margin: 10px; */
-  max-width: 650px;
-  min-width: 550px;
+  height: 250px;
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+.projectImg{
+  max-width: 400px;
+  height: 250px;
+
 }
 .projectContent h4 {
   background-color: #1d1d1d;
@@ -308,8 +321,6 @@ p {
   padding: 10px 20px;
 }
 .projectP {
-  max-width: 500px;
-  min-width: 230px;
   text-align: center;
 }
 .projectContent::before,
@@ -410,4 +421,10 @@ p {
   position: absolute;
   z-index: 2;
   width: 100%;
+}
+
+#contactH3{
+  margin-top: 4%;
+  /* background-color: #00bfff; */
+
 }
