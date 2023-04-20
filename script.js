@@ -11,8 +11,25 @@ for (let index = 0; index < numberOfColorBoxes; index++) {
     bgAnimation.append(colorBox)
 }
 
+//nav
+const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+    if(window.scrollY > nav.offsetHeight + 950) {
+        nav.classList.add('active')
+    } else {
+        nav.classList.remove('active')
+    }
+}
+
 //aboutme
 const aboutContainerEl = document.getElementById('aboutContainer')
+
+// function actualizar(){
+//     location.reload(true)
+// }
+// setInterval("actualizar()",4000);
 
 
 // function timedRefresh(timeoutPeriod) {
