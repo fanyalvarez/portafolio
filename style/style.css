@@ -213,6 +213,8 @@ p {
   position: absolute;
   bottom: 46px;
   left: 0;
+  /* animation-delay: 5400ms; */
+  /* animation-iteration-count:inherit; */
 }
 
 .aboutText {
@@ -247,6 +249,8 @@ margin-bottom: 5%;
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: line-ani 5.5s forwards;
+  /* animation-delay: 5400ms ; */
+  animation-iteration-count: infinite;
 }
 
 .border {
@@ -254,6 +258,8 @@ margin-bottom: 5%;
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   animation: line-ani 3s forwards;
+  /* animation-delay: 5400ms ; */
+  /* animation-iteration-count: infinite; */
 }
 
 @keyframes line-ani {
@@ -312,7 +318,7 @@ margin-bottom: 5%;
   width: 100px;
   height: 100px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  animation: rotate 5s infinite linear;
+  animation: rotate 10s infinite linear;
 }
 
 @keyframes rotate {
@@ -590,5 +596,5 @@ textarea {
   height: 150px;
 }
 #btn-message{
-  padding-bottom: 2.7rem;
+  padding-bottom: 2.4rem;
 }

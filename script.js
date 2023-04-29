@@ -24,7 +24,6 @@ function fixNav() {
 }
 
 //aboutme
-const aboutContainerEl = document.getElementById('aboutContainer')
 
 // function actualizar(){
 //     location.reload(true)
