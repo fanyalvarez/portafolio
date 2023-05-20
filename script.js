@@ -1,12 +1,12 @@
 // home
-const bgAnimation = document.getElementById ('bgAnimation')
-const backgroundAnim = document.getElementById ('backgroundAnim')
+const bgAnimation = document.getElementById('bgAnimation')
+const backgroundAnim = document.getElementById('backgroundAnim')
 
 const numberOfColorBoxes = 400
 
 for (let index = 0; index < numberOfColorBoxes; index++) {
     const colorBox = document.createElement
-    ('div')
+        ('div')
     colorBox.classList.add('colorBox')
     bgAnimation.append(colorBox)
 }
@@ -16,27 +16,12 @@ const nav = document.querySelector('.nav')
 window.addEventListener('scroll', fixNav)
 
 function fixNav() {
-    if(window.scrollY > nav.offsetHeight + 950) {
+    if (window.scrollY > nav.offsetHeight + 950) {
         nav.classList.add('active')
     } else {
         nav.classList.remove('active')
     }
 }
-
-//aboutme
-
-// function actualizar(){
-//     location.reload(true)
-// }
-// setInterval("actualizar()",4000);
-
-
-// function timedRefresh(timeoutPeriod) {
-// 	setTimeout("location.reload(true);",timeoutPeriod);
-// }
-// window.onload = timedRefresh(6000);
-
-
 
 // funcion subtitle
 const textAboutEl = document.getElementById('textAbout')
@@ -66,3 +51,25 @@ function writeText() {
     setTimeout(writeText, 150)
 }
 
+
+// funcion email
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_f0vrfmq';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
