@@ -1,8 +1,6 @@
 /* skills */
 .skills {
-    margin-top: 2%;
-    width: 99vw;
-    padding: 1rem;
+    width: 100vw;
 }
 
 .containerSkills {
@@ -12,10 +10,11 @@
 }
 
 .skills .contentSkills {
-    width: 850px;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-content: space-around;
 }
 
 .skills .icon {
@@ -63,17 +62,8 @@
     }
 }
 
-@media screen and (max-width: 860px) {
-    .skills .contentSkills {
-        width: 600px;
-    }
-}
 
 @media screen and (max-width: 600px) {
-    .skills .contentSkills {
-        width: 400px;
-    }
-
     .skills img {
         width: 6.3rem;
     }
@@ -84,8 +74,8 @@
     }
 }
 
-@media screen and (max-width: 360px ) {
+@media screen and (min-width: 1000px) {
     .skills .contentSkills {
-        width: 350px;
+        width: 850px;
     }
-  }
+}
