@@ -194,19 +194,26 @@ textarea {
 
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 360px) {
+    .form_input {
+        width: 300px;
+    }
+    .form h2{
+        font-size: 1.2rem;
+    }
     .media {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        transition: 1.25s;
-        margin-top: 2rem;
+        justify-content: space-evenly;
+        font-size: .8rem;
     }
     .media .mediaCard {
-        width: 80px;
+        width: 50px;
     }
-    .form h2{
-        font-size: 1rem;
+    .contact svg {
+
+        height: 190vh;
+
     }
+
 }

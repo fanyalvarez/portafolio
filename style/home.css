@@ -1,13 +1,11 @@
 /* home */
 .home {
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   pointer-events: none;
-  margin-bottom: 3%;
-  position: relative;
-  height: 90vh;
 }
-
 .nav {
   width: 100%;
   display: flex;
@@ -20,19 +18,15 @@
   top: -1px;
   z-index: 10;
 }
-
 .nav.active {
   background-color: #333333;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   padding: 0 40px;
   margin: 0;
-
 }
-
 .nav ul {
   display: flex;
 }
-
 .nav ul li {
   position: relative;
   list-style: none;
@@ -42,14 +36,20 @@
   transform: 0.3s;
   overflow: hidden;
 }
-
 .nav ul li a {
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 400;
   color: #fff;
 }
-
+.home .homeText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  text-align: center;
+  pointer-events: none;
+}
 .nav ul li::after {
   content: "";
   position: absolute;
@@ -61,69 +61,39 @@
   transform: translateX(-50%);
   transition: 0.3s;
 }
-
 .nav li:hover {
   color: #00bfff;
 }
-
 .nav li:hover::after {
   width: 70%;
 }
-
-/* home */
-.home .homeText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 200px);
-  text-align: center;
-  pointer-events: none;
-}
-
-.textBox {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.homeText h1 {
-  font-size: 9rem;
-}
-
-.homeText h3 {
-  font-size: 5rem;
-}
-
 .btn:hover {
   background-color: var(--i);
   color: #000;
 }
-
 .bgAnimation {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   grid-template-rows: repeat(20, 1fr);
   background-color: #1d1d1d;
   filter: saturate(2);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
-
 .bgAnimation .backgroundAnim {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  /* height: 100vh; */
-  background-color: #00bfff0e;
-  filter: blur(100px);
-  /* animation: animBack 6s linear infinite; */
+  width: 100%;
+  height: 60px;
+  background-color: #00bfff;
+  filter: blur(60px);
+  animation: animBack 6s linear infinite;
 }
-
 .colorBox {
   z-index: 2;
   filter: brightness(1.1);
@@ -132,21 +102,19 @@
   margin: 2px;
   background: #1d1d1d;
 }
-
 .colorBox:hover {
   background: #00bfff;
   transition-duration: 0s;
 }
-
 @keyframes animBack {
   0% {
-    top: -60px;
+    top: -70px;
   }
-
   100% {
     top: 100%;
   }
 }
+
 
 
 
