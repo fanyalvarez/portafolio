@@ -1,0 +1,134 @@
+/* about */
+.aboutme {
+  margin-top: 2%;
+  /* padding: 1rem; */
+  width: 100vw;
+  /* background-color: rgb(158, 136, 104); */
+}
+
+.aboutme .aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.aboutPhoto {
+  height: 451px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.aboutImg {
+  text-align: center;
+  max-width: 379px;
+  z-index: 3;
+  opacity: 1;
+  animation: photo-ani 4s forwards;
+  position: absolute;
+  bottom: 3.01rem;
+  left: 0;
+}
+
+.aboutText {
+  padding-bottom: 1.2%;
+  text-align: center;
+  padding: 1rem;
+  width: 450px;
+}
+
+.aboutPhoto-line {
+  max-width: 379px;
+  min-width: 379px;
+  z-index: 2;
+  position: relative;
+  bottom: 56px;
+}
+
+.aboutme .aboutContainer .aboutText h4 {
+  font-size: 35px;
+  padding-bottom: 4%;
+}
+
+.aboutme .aboutContainer .aboutText p {
+  letter-spacing: 1px;
+  padding-bottom: 4%;
+  font-size: 1.2rem;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: line-ani 5.5s forwards;
+  animation-iteration-count: infinite;
+}
+
+.border {
+  stroke-width: 1px;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: line-ani 3s forwards;
+  /* animation-delay: 5400ms ; */
+  /* animation-iteration-count: infinite; */
+}
+
+@keyframes line-ani {
+  to {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes photo-ani {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 860px ) {
+  .aboutme .aboutContainer .aboutText p {
+    font-size: .9rem;
+  }
+  .btns .btn{
+    font-size: .9rem;
+  }
+}
+
+@media screen and (min-width: 1500px ) {
+  .aboutText {
+    width: 560px;
+  }
+  .btns .btn{
+    font-size: 1.6rem;
+  }
+}
+/* 
+@media screen and (min-width: 350px) {
+
+  .aboutme,
+  .aboutPhoto-line, .aboutImg {
+    width: 220px;
+  }
+
+  .aboutImg {
+    bottom: 8.01rem;
+    left: 0;
+  }
+} */
